@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telequiery
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: telequiery
+  template:
+    metadata:
+      labels:
+        app: telequiery
+    spec:
+      containers:
+      - name: telemetry-query-service
+        image: axionacrmicroservice1.azurecr.io/axion-telemetry-query-service:v1
+        ports:
+        - containerPort: 8080
