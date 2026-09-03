@@ -1,0 +1,3 @@
+# for ui keep the main domain working
+# it will connect with query service
+# quirey service & << database simulator ,<< &  ingestion service << will connnect with DB

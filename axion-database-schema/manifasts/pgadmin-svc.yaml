@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgadminservice
+spec:
+  type: ClusterIP
+  selector:
+    app: pgadmin
+  ports:
+  - port: 80
+    targetPort: 80
+
+# write one ingress controller for that we need one sub domain , for this service
