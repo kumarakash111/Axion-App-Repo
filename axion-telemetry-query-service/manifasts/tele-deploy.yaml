@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: telemetry-query-service
-        image: axionacrmicroservice1.azurecr.io/axion-telemetry-query-service:v1
+        image: acraxionservice.azurecr.io/axion-telemetry-query-service:v1
         ports:
         - containerPort: 8080

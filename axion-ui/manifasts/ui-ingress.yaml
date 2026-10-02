@@ -1,3 +1,21 @@
-# for ui keep the main domain working
-# it will connect with query service
-# quirey service & << database simulator ,<< &  ingestion service << will connnect with DB
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ui-ingress
+  labels:
+    app.kubernetes.io/name: ui-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: aknsp.shop
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: axionuiservice
+            port: 
+              number: 80
+
+

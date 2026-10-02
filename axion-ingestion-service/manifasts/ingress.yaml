@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingestioningress
+  labels:
+    app.kubernetes.io/name: ingestioningress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ingestion.aknsp.shop
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ingestionservice
+            port: 
+              number: 8000

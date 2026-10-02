@@ -7,7 +7,7 @@ import { Throughput } from '../Throughput';
 import { DigitalTwin } from '../DigitalTwin';
 import { ThermalCamera } from '../ThermalCamera';
 
-const API_BASE = 'https://api.axionsystems.de';
+const API_BASE = 'https://query.aknsp.shop';
 
 interface DashboardViewProps {
   devices: any[];

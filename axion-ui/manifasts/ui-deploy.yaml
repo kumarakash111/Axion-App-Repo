@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: axionui
-        image: axionacrmicroservice1.azurecr.io/axion-ui:v1
+        image: acraxionservice.azurecr.io/axionui:v1
         ports:
         - containerPort: 80

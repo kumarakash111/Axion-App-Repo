@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: queryingress
+  labels:
+    app.kubernetes.io/name: queryingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: query.aknsp.shop
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: telequieryservice
+            port: 
+              number: 8000
